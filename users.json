@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "uname": "nguyenvana",
+      "password": "password_123",
+      "url_profile": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde",
+      "short_bio": "This is a short bio about Nguyen Van A."
+    },
+    {
+      "id": 2,
+      "uname": "tranvanb",
+      "password": "password_456",
+      "url_profile": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61",
+      "short_bio": "This is a short bio about Tran Van B."
+    }
+  ]
+}
