@@ -7,34 +7,26 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.squareup.picasso.Picasso;
-
 import java.util.ArrayList;
 
-public class ArticleAdapter extends BaseAdapter {
-  private ArrayList<Article> article_list;
+public class UserAdapter extends BaseAdapter {
+  private ArrayList<User> user_list;
   private Context context;
 
-  public ArticleAdapter(ArrayList<Article> article_list, Context context) {
-    this.article_list = article_list;
+  public UserAdapter(ArrayList<User> user_list, Context context) {
+    this.user_list = user_list;
     this.context = context;
   }
 
   @Override
-  public int getCount() {
-    return article_list.size();
-  }
+  public int getCount() { return user_list.size(); }
 
   @Override
-  public Object getItem(int position) {
-    return article_list.get(position);
-  }
+  public Object getItem(int position) { return user_list.get(position); }
 
   @Override
-  public long getItemId(int position) {
-    return article_list.get(position).getArticle_id();
-  }
+  public long getItemId(int position) { return user_list.get(position).getId(); }
 
   @Override
   public View getView(int position, View convertView, ViewGroup parent) {
@@ -50,8 +42,8 @@ public class ArticleAdapter extends BaseAdapter {
       dataitem = (MyView) convertView.getTag();
     }
 
-    Picasso.get().load(article_list.get(position).getArticle_image()).resize(300, 400).centerCrop().into(dataitem.iv_photo);
-    dataitem.tv_caption.setText(article_list.get(position).getArticle_title());
+    Picasso.get().load(user_list.get(position).getUrl_profile()).resize(300, 400).centerCrop().into(dataitem.iv_photo);
+    dataitem.tv_caption.setText(user_list.get(position).getUname());
     return convertView;
   }
 
